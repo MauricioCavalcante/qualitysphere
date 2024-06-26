@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.borda{
+    border: 2px solid red;
+}
+:root{
+    --primary-color: #000;
+    --secundary-color: #b3b3b3;
+    --third-color: #474040;
+}
+
+.login{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 400px;
+        
+        input{
+            border: none;
+            border-bottom: 2px solid var(--third-color);
+            border-radius: 0;
+        }
+        input:focus {
+            outline: none;
+            border-bottom-color: #000000;
+        }
+    }
+}
+
+
+header{
+    margin: 10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    position: sticky;
+    nav{
+        margin:-8px 8px -8px 8px;
+        
+        background: transparent;
+        img{
+            height: 40px;
+        }
+    }
+}
