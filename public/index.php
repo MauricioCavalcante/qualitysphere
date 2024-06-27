@@ -21,13 +21,13 @@ include("../resources/Views/layouts/header.php");
 ?>
 
 <head>
-    <title>QualitySphere</title>
-    <link rel="stylesheet" href="../public/css/styles.css">
+<title>QualitySphere</title>
+<link rel="stylesheet" href="../public/css/styles.css">
 </head>
 
 <main class="m-5">
-    <h3>Bem vindo, <?php echo $_SESSION['user'] ?> !</h3>
+    <h3>Bem vindo, <?php echo $_SESSION['user'] ?> !</h3>  
 </main>
 
 
-<script src="../public/js/scripts.js"></script>
+<script src="../../public/js/scripts.js"></script>

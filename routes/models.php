@@ -1,7 +1,8 @@
 <?php
+$diretorio = '/qualitysphere';
 
 //Models
-$UserModel = '/qualitysphere/app/Models/User.php';
-$UserModel = '/qualitysphere/app/Models/Chamado.php';
+$UserModel = $diretorio . '/app/Models/User.php';
+$ChamadoModel = $diretorio . '/app/Models/Chamado.php';
 
 ?>

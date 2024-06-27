@@ -9,7 +9,7 @@ class User{
     private $cliente;
     private $ramal;
     private $grupo;
-    private $data_registro;
+    private $data_rec;
 
     function __get($atributo){
         return $this->$atributo;

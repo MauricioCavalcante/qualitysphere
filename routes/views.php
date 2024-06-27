@@ -1,18 +1,25 @@
 <?php
+//variaveis para nome da aplicação
+$diretorio = '/qualitysphere';
+$titulo = 'QualitySphere';
 
-$index = '/qualitysphere/public/index.php';
+$index = $diretorio . '/public/index.php';
 
 //auth
-$login = '/qualitysphere/resources/Views/auth/login.php';
-$logout = '/qualitysphere/resources/Views/auth/logout.php';
+$login = $diretorio . '/resources/Views/auth/login.php';
+$logout = $diretorio . '/resources/Views/auth/logout.php';
 
 //chamado
-$chamados = '/qualitysphere/resources/Views/chamados/chamados.php';
-$details_chamado = '/qualitysphere/resources/Views/chamados/details_chamados.php';
-$novo_chamado = '/qualitysphere/resources/Views/chamados/novo_chamado.php';
+$chamados = $diretorio . '/resources/Views/chamados/chamados.php';
+$details_chamado = $diretorio . '/resources/Views/chamados/details_chamado.php';
+$novo_chamado = $diretorio . '/resources/Views/chamados/novo_chamado.php';
 
 //user
-$gestor = '/qualitysphere/resources/Views/user/gestor.php';
-$usuario = '/qualitysphere/resources/Views/user/usuario.php';
-$novo_usuario = '/qualitysphere/resources/Views/user/novo_usuario.php';
-$config_usuario = '/qualitysphere/resources/Views/user/config_usuario.php';
+$gestor = $diretorio . '/resources/Views/user/gestor.php';
+$usuario = $diretorio . '/resources/Views/user/user.php';
+$novo_usuario = $diretorio . '/resources/Views/user/novo_user.php';
+$details_usuario = $diretorio . '/resources/Views/user/details_user.php';
+$config_usuario = $diretorio . '/resources/Views/user/config_user.php';
+
+
+?>

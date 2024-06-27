@@ -33,7 +33,6 @@ if (isset($_SESSION['user'])) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../../../public/css/styles.css">
-
 </head>
 
 <body>
@@ -42,7 +41,7 @@ if (isset($_SESSION['user'])) {
       <div class="p-2 flex-grow-1">
         <nav class="navbar navbar-expand-sm text-light" data-bs-theme="dark">
           <div class="container-fluid">
-            <a class="navbar-brand"><img src="/qualitysphere/public/images/logo-hitss.jpg" alt=""></a>
+            <a class="navbar-brand" href="<?php echo $index ?>"><img src="<?php echo $diretorio ?>/public/images/logo-hitss.jpg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -96,13 +95,13 @@ if (isset($_SESSION['user'])) {
               </a>
               <ul class="dropdown-menu text-center text-nowrap p-2">
                 <li>
-                  <?php echo $user['nome']; ?>
+                  <?php echo $user['nome'];?>
                 </li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="<?php echo $config_usuario; ?>">Configurações</a></li>
-                <li><a class="dropdown-item" href="<?php echo $usuario; ?>">Chamados</a></li>
+                <li><a class="dropdown-item" href="<?php echo $config_usuario; ?>">Perfil</a></li>
+                <li><a class="dropdown-item" href="<?php echo $usuario; ?>">Meus Chamados</a></li>
                 <li><a class="dropdown-item" href="#">Notificações</a></li>
                 <li><a class="dropdown-item" href="<?php echo $logout; ?>"><u>Sair</u></a></li>
               </ul>
@@ -115,7 +114,7 @@ if (isset($_SESSION['user'])) {
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="/qualitysphere/public/js/scripts.js"></script>
+  <script src="../../../public/js/scripts.js"></script>
 </body>
 
 </html>

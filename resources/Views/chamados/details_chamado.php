@@ -28,13 +28,13 @@ if (isset($_GET['id'])) {
         $chamado = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$chamado) {
-            include("./layouts/header.php");
+            include("../layouts/header.php");
 
             echo "<div class='alert alert-danger text-center m-5'>Chamado não encontrado.</div>";
             exit();
         }
 
-        $audioPath = isset($chamado['caminho_audio']) ? $chamado['caminho_audio'] : null;
+        //$audioPath = isset($chamado['caminho_audio']) ? $chamado['caminho_audio'] : null;
     } catch (PDOException $e) {
         echo 'Erro' . $e->getCode() . ' Mensagem:' . $e->getMessage();
         exit();
@@ -49,7 +49,7 @@ include("../layouts/header.php");
 ?>
 
 <head>
-    <title>Detalhes do Chamado</title>
+    <title><?php echo $titulo ?> - Detalhes do Chamado</title>
     <link rel="stylesheet" href="../../../public/css/styles.css">
 </head>
 
@@ -57,7 +57,7 @@ include("../layouts/header.php");
     <h3>Detalhes do Chamado</h3>
 
     <div class="table-responsive">
-        <table class="table table-striped table-sm">
+        <table class="table table-striped table-sm align-middle text-nowrap">
             <tr>
                 <th>ID_Chamado</th>
                 <td><?php echo htmlspecialchars($chamado['id_chamado']); ?></td>

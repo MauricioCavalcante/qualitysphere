@@ -1,10 +1,11 @@
 <?php
+$diretorio = '/qualitysphere';
 
 //Controllers
-$Config = '/qualitysphere/app/Controllers/Config.php';
-$ChamadoController = '/qualitysphere/app/Controllers/ChamadoController.php';
-$AuthController = '/qualitysphere/app/Controllers/AuthController.php';
-$UserController = '/qualitysphere/app/Controllers/UserController.php';
-$UpdateChamado = '/qualitysphere/app/Controllers/AtualizarChamado.php';
+$Config = $diretorio . '/app/Controllers/Config.php';
+$ChamadoController = $diretorio . '/app/Controllers/ChamadoController.php';
+$AuthController = $diretorio . '/app/Controllers/AuthController.php';
+$UserController = $diretorio . '/app/Controllers/UserController.php';
+$UpdateChamado = $diretorio . '/app/Controllers/AtualizarChamado.php';
 
 ?>

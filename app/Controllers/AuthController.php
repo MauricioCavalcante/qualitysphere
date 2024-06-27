@@ -1,13 +1,13 @@
 <?php
-
 session_start();
 
-
+// Limpeza das variáveis de sessão
 $_SESSION['user'] = '';
 $_SESSION['cliente'] = '';
 $_SESSION['user_name'] = '';
 $_SESSION['group'] = '';
 
+// Inclusão dos arquivos de configuração e rotas
 require 'Config.php';
 require '../../routes/views.php';
 require '../../routes/controllers.php';
@@ -21,15 +21,16 @@ try {
         $username = $_POST['username'];
         $senha = $_POST['senha'];
 
-        // Requisição separada para evitar injeção de SQL
-        $query = 'SELECT * FROM tb_user WHERE (email = :username OR username = :username) AND password = :senha';
+        // Consulta SQL com placeholders para prevenir SQL injection
+        $query = 'SELECT * FROM tb_user WHERE (email = :username OR username = :username)';
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':senha', $senha);
         $stmt->execute();
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($usuario) {
+        if ($usuario && password_verify($senha, $usuario['password'])) {
+            // Senha verificada com sucesso
+            $_SESSION['user_id'] = $usuario['id_user'];
             $_SESSION["user"] = $usuario['nome'];
             $_SESSION['user_name'] = $usuario['username'];
             $_SESSION['cliente'] = $usuario['cliente'];
