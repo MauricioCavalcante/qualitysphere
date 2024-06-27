@@ -36,13 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <title>QualitySphere - Novo usuário</title>
-    <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="stylesheet" href="../../../public/css/novo_usuario.css">
 </head>
-<main>
-    <div class="container-fluid text-center">
+<main class="pagina-novo-usuario">
+    <div class="container-fluid p-5 pt-3">
         <h3>Novo usuário</h3>
-    </div>
-    <div class="container w-50 mt-5">
         <form class="form-group" action="<?php echo $UserController . '?request=inserir'; ?>" method="post">
 
             <div class="mb-3 row justify-content-end">
@@ -89,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="mb-3 row justify-content-end ">
-                <label class="col-3 col-form-label text-end" >Grupo</label>
+                <label class="col-3 col-form-label text-end">Grupo</label>
                 <select class="col-9" name="grupo">
                     <option value="ATENDENTE">ATENDENTE</option>
                     <option value="COORDENADOR">COORDENADOR</option>

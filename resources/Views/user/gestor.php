@@ -18,13 +18,11 @@ include("../layouts/header.php");
 
 <head>
     <title>QualitySphere</title>
-    <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="stylesheet" href="../../../public/css/usuarios.css">
 </head>
 
-<main>
-    <div class="container-fluid text-center pt-5">
-        Página do Gestor
-    </div>
+<main class="container pagina-usuarios">
+    <h3>Página do gestor</h3>
     <div class="container-fluid ms-5">
         <a class="btn btn-success" href="<?php echo $novo_usuario ?>"><u>Novo Usuário</u></a>
     </div>
@@ -42,7 +40,7 @@ include("../layouts/header.php");
             </thead>
             <tbody>
                 <?php
-                
+
                 try {
                     $conexao = new PDO($dbname, $db_username, $db_password);
                     $query = "SELECT * FROM tb_user";

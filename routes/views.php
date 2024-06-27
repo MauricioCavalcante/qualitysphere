@@ -1,6 +1,6 @@
 <?php
 
-$index = '/qualitysphere/resources/Views/index.php';
+$index = '/qualitysphere/public/index.php';
 
 //auth
 $login = '/qualitysphere/resources/Views/auth/login.php';
@@ -16,6 +16,3 @@ $gestor = '/qualitysphere/resources/Views/user/gestor.php';
 $usuario = '/qualitysphere/resources/Views/user/usuario.php';
 $novo_usuario = '/qualitysphere/resources/Views/user/novo_usuario.php';
 $config_usuario = '/qualitysphere/resources/Views/user/config_usuario.php';
-
-
-?>

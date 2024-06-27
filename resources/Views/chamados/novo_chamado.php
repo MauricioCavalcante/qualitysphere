@@ -18,24 +18,25 @@ include("../layouts/header.php");
 
 <head>
     <title>QualitySphere - Novo Chamado</title>
-    <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="stylesheet" href="../../../public/css/novo_chamado.css">
 </head>
 
-<main>
+<main class="pagina-novo-chamado">
     <?php
-    if (isset($_GET['inserir']) && isset($_GET['inserir']) == 1) { ?>
+    if (isset($_GET['inserir']) && $_GET['inserir'] == 1) { ?>
         <div class="bg-success m-3 p-2 pt-2 rounded-4 text-white d-flex justify-content-center">
             <h5>Chamado registrado com sucesso</h5>
         </div>
     <?php } ?>
     <?php
-    if (isset($_GET['inserir']) && isset($_GET['inserir']) == "tipo_nao_permitido") { ?>
+    if (isset($_GET['inserir']) && $_GET['inserir'] == "tipo_nao_permitido") { ?>
         <div class="bg-warning m-3 p-2 pt-2 rounded-4 text-white d-flex justify-content-center">
             <h5>Arquivo não permitido</h5>
         </div>
     <?php } ?>
-    
+
     <div class="container-fluid p-5 pt-3">
+        <h3>Novo chamado</h3>
         <form class="form-group" action="<?php echo $ChamadoController . '?request=inserir'; ?>" method="post" enctype="multipart/form-data">
             <label for="nome">Nome:</label>
             <input class="form-control" type="text" value="<?php print_r($_SESSION['user']) ?>" name="atendente" disabled readonly>
@@ -65,7 +66,3 @@ include("../layouts/header.php");
 </main>
 
 <script src="../../../public/js/scripts.js"></script>
-
-<?php
-
-?>
